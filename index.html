@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page-slider-js</title>
+    <script src="slider.js"></script>
+    <link rel="stylesheet" href="slider.css">
+
+    <style>
+      #home {
+        background: black;
+      }
+      #french {
+        background: linear-gradient(#f3defc, #63a3e6);
+      }
+      #spanish {
+        background: linear-gradient(#d2fcad, #22eaeb);
+      }
+      #hindi{
+        background: linear-gradient(#f0bed4, #a163f5);
+      }
+      #mandarin {
+        background: linear-gradient(#65cce1, #6365ec);
+      }
+
+      section > span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 7vw;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+      }
+
+      section > video {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slides">
+      <section class="slides__id" id="home">
+        <video autoplay loop muted plays-inline width="100%" height="100%" class="back-video">
+            <source src="assets/videos/production ID_4713259.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video><span>Hallo</span></section>
+      <section id="french"><span>Bonjour</span></section>
+      <section id="spanish"><span>Hola</span></section>
+      <section id="hindi"><span>Namaste</span></section>
+      <section id="mandarin"><span>你好</span></section>
+    </div>
+
+    <script>
+      var mySlider = slider('.slides');
+    </script>
+  </body>
+</html>
